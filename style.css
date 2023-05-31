@@ -236,23 +236,60 @@ a{
     }
 }
 
-@media (max-width: 506px){
-    .text{
-        font-size: 150%;
+@media (max-width: 428px){
+    #logo{
+        font-size: 100%;
     }
-
-    #clock{
-        font-size: 250%;
+    
+    #navarea{
+        font-size: 70%;
+    }
+    .blok{
+        font-size: 70%;
     }
 }
 
-@media (max-width: 344px){
+@media (max-width: 356px){
     .text{
         font-size: 125%;
     }
 
     #clock{
         font-size: 150%;
+    }
+
+    #logo{
+        font-size: 70%;
+    }
+    
+    #navarea{
+        font-size: 50%;
+    }
+
+    nav{
+        margin: 5px;
+    }
+}
+
+@media (max-width: 291px){
+    .text{
+        font-size: 100%;
+    }
+
+    #clock{
+        font-size: 125%;
+    }
+
+    #logo{
+        font-size: 45%;
+    }
+    
+    #navarea{
+        font-size: 50%;
+    }
+
+    nav{
+        margin: 3px;
     }
 }
 /* link do obrazka z chmurkami https://www.bing.com/images/search?view=detailV2&id=AF04482C4CC0CE3E9ADF582AA6987E992DAF9892&thid=OIP.kdly9SPKzF34ZIsN_k6q0gHaEe&exph=260&expw=430&q=Pink+Clouds+png&form=IRPRST&selectedindex=33&ajaxhist=0&ajaxserp=0&vt=0&sim=11*/
