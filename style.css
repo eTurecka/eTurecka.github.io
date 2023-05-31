@@ -1,0 +1,266 @@
+*{
+    margin: 0; 
+}
+header{
+    background: url(niebo.jpg);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+#logo{
+    font-size: 200%;
+    color: rgb(237, 134, 151);
+}
+
+#navarea{
+    list-style: none;
+    font-size: 150%;
+}
+
+#navarea li{
+    display: inline-block;
+    color: white;
+    padding: 5px 20px;
+
+}
+
+li:hover{
+    text-decoration: underline;
+    translate: 5px;
+}
+
+#navarea li a{
+    text-decoration: none;
+    color: white;
+}
+
+#srodek{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 30px 50px;
+    margin: 50px;
+}
+
+.text{
+    color: rgb(58, 148, 178);
+    font-weight: 700;
+    font-size: 300%;
+}
+
+#clock{
+    font-size: 500%;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    animation: allAround 3s ease-out infinite;
+}
+
+@keyframes allAround{ /*Animacja dla zegara, aby kolor delikatnie zmieniał się na inny odcien */
+    0%{
+        box-shadow: 0px 0px 30px 30px #ffcccc;
+        background: #ffcccc;
+    }
+    50%{
+        box-shadow: 0px 0px 30px 30px #f8b3b3;
+        background: #f8b3b3;
+    }
+    100%{
+        box-shadow: 0px 0px 30px 30px #ffcccc;
+        background: #ffcccc;
+    }
+}
+
+#dol{
+    display: flex;
+    justify-content: space-around;
+    margin: 35px;
+}
+
+img{
+    transform: translateX(0px);
+    animation: float 6s ease-out infinite;
+}
+
+@keyframes float{ /* Animacja dla chmurek, aby poruszały się góra i dół. Liczba % opisuje etap, w którym chmurki mają wykonywać przypisane im zdarzenie*/
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#about{
+    background: linear-gradient(#ffcccc, rgb(122, 181, 212));
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 600px;
+    
+}
+
+#zawartosc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#zawartosc2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.blok{
+    margin: 20px 5px 20px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 10px 10px 10px dimgray;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h2{
+    color:rgb(99, 172, 211) ;
+}
+
+
+#stopka{
+    background: rgb(122, 181, 212);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 300px;
+    line-break: 10px;
+    
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+@media (max-width: 1186px){
+    .text{
+        font-size: 250%;
+    }
+
+    #clock{
+        font-size: 450%;
+    }
+}
+
+@media (max-width: 1066px){
+    .text{
+        font-size: 200%;
+    }
+
+    #clock{
+        font-size: 400%;
+    }
+}
+
+@media (max-width: 919px){
+    #srodek{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 20px 40px;
+        margin: 40px;
+    }
+
+    #clock{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 859px){
+    #stopka{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+@media (max-width: 641px){
+    #zawartosc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #zawartosc2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #logo{
+        font-size: 150%;
+    }
+    
+    #navarea{
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 506px){
+    .text{
+        font-size: 150%;
+    }
+
+    #clock{
+        font-size: 350%;
+    }
+
+    img{
+        height: 150px;
+    }
+}
+
+@media (max-width: 506px){
+    .text{
+        font-size: 150%;
+    }
+
+    #clock{
+        font-size: 250%;
+    }
+}
+
+@media (max-width: 344px){
+    .text{
+        font-size: 125%;
+    }
+
+    #clock{
+        font-size: 150%;
+    }
+}
+/* link do obrazka z chmurkami https://www.bing.com/images/search?view=detailV2&id=AF04482C4CC0CE3E9ADF582AA6987E992DAF9892&thid=OIP.kdly9SPKzF34ZIsN_k6q0gHaEe&exph=260&expw=430&q=Pink+Clouds+png&form=IRPRST&selectedindex=33&ajaxhist=0&ajaxserp=0&vt=0&sim=11*/
+
+
+
+
+
+
+
+

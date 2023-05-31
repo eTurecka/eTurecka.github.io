@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/358d9e425b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="logo">TURECKA</p>
+            <ul id="navarea">
+                <a href="#header"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#stopka"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <div id="srodek">
+        <div id="naglowek">
+            <p class="text">Portfolio</p>
+            <p class="text">Full-stack Webdeveloper</p>
+            <p class="text">EMILIA TURECKA</p>
+        </div>
+        <div id="clock" onload="currentTime()">
+        </div>
+        <script> /*Zegar generowany Javascript */
+            function currentTime() {
+                let date = new Date(); /*Pobieranie wartości data, czas itp, oraz przypisywanie ich do zmiennych */
+                let hh = date.getHours();
+                let mm = date.getMinutes();
+                let ss = date.getSeconds();
+                let session = "AM";
+  
+            if(hh == 0){    /*Instrukcja sprawdzająca czy wyświetlić AM czy PM */
+                 hh = 12;
+            }
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+             }
+  
+            hh = (hh < 10) ? "0" + hh : hh; /*Ustawianie odpowiedniego formatu wyświetlania godziny */
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+      
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+  
+    document.getElementById("clock").innerText = time; /*Wyświetlanie zegara */
+    let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+  currentTime();
+        </script>
+        </div>
+        <div id="dol">
+            <img src="clouds.png">
+        </div>
+    </header>
+   
+    <div id="about">
+            <div id="zawartosc">
+                <div class="blok">
+                    <h2>Edukacja</h2>
+                    <p>Uczennica technikum o profilu technik programista. Kwalifikacje zawodowe, które mnie czekają inf.03 inf.04.</p>
+                </div>
+                <div class="blok">
+                    <h2>Umiejętności</h2>
+                    <p>Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych. Używam języków takich jak: HTML, CSS, JavaScript, PHP, SQL, Python</p>
+                </div>
+            </div>
+            <div id="zawartosc2">
+                <div class="blok">
+                    <h2>Doświadczenie</h2>
+                    <p>Praktyki w Interium w Bolesławcu oraz freelancing.</p>
+                </div>
+                <div class="blok">
+                    <h2>Dalszy rozwój</h2>
+                    <p>Z dnia na dzień rozwijam się w kierunku programowania, nie tylko stron internetowych. Należę do projektu "Cyfrowa przyszłość miedzi", dzięki któremu mogę się kształcić na wyższym poziomie.</p>
+                </div>
+            </div>
+            
+    </div>
+    <div id="stopka">
+        <div class="kontakt" >
+            <i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/emilia-turecka-517a42232/" target="_blank">Linkedin</a><br>
+            <i class="fa-brands fa-github"></i><a href="">GitHub</a>
+        </div>
+        <div class="kontakt">
+            Emilia Turecka <br>
+            <i class="fa-solid fa-phone"></i>+48 787 806 793 <br>
+            <i class="fa-solid fa-envelope"></i> emiliaturecka.webdeveloper@gmail.com
+        </div>
+        <div class="kontakt">
+            <i class="fa-solid fa-house"></i>Krępnica 12C<br>
+            59-700 Boleslawiec
+        </div>
+    </div>
+</body>
+</html>
